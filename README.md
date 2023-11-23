@@ -1,4 +1,4 @@
-## INRL Multi Device Whatsapp Bot.
+## INRL BY IDRISS Multi Device Whatsapp Bot.
 
 ***
 
