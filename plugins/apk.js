@@ -14,7 +14,7 @@ inrl({
         let NewArray = [];
         try {
                 match = match || message.reply_message.text;
-                if (!match) return await message.send("*please give me an application name*");
+                if (!match) return await message.send("*اعطيني اسم تطبيق يا اخي مفضل);
                 const {
                         data
                 } = await axios(BASE_URL + 'api/apk/search?query=' + encodeURIComponent(match));
@@ -37,7 +37,7 @@ inrl({
                 } = await axios(BASE_URL + 'api/apk/download?query=' + encodeURIComponent(match));
                 if (!data.status || !data.result) return await message.send("*No result Found*");
                 await message.sendReply(data.result.icon, {
-                        caption: "*downloading⬇️*\n```" + match + "```\n*developer*: ```" + data.result.dev + "```"
+                        caption: "*جاري تحميل وشكرا⬇️*\n```" + match + "```\n*developer*: ```" + data.result.dev + "```"
                 }, "image");
                 return await message.conn.sendMessage(message.chat, {
                         document: {
@@ -49,6 +49,6 @@ inrl({
                         quoted: message
                 })
         } catch (e) {
-                return await message.send('_Error, try again!_')
+                return await message.send('خطا مرجوا اعادة!_')
         }
 });
